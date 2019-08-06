@@ -7,10 +7,13 @@ pagehelper:
 spring:
   datasource:
     druid:
-      url:  jdbc:mysql://localhost:3306/litemall?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
-      driver-class-name:  com.mysql.jdbc.Driver
-      username:  litemall
-      password:  litemall123456
+      url:  jdbc:mysql://39.107.49.169:3308/litemall??useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+      # 可省略驱动配置, sprin-boot 会由url检测出驱动类型
+      #driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+      # 使用druid数据源
+      type: com.alibaba.druid.pool.DruidDataSource
       initial-size:  10
       max-active:  50
       min-idle:  10
